@@ -6,7 +6,6 @@ Reality Shifters a platformer made in godot where a player must switch realities
 Contributers:
 Coffee and errors: Main programmer
 horseywin: Logic helper
--
 
 Language/engine:
 Godot
