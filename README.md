@@ -1,11 +1,11 @@
 # Reality-shifters
-"2-man army making a small game based on shifting realities"
+"2-man army making a game based on shifting realities"
 
-Reality Shifters a platformer made in godot where a player must switch realities to complete the playformer.
+Reality Shifters a platformer made in godot where a player must switch realities to complete the platformer.
 
 Contributers:
-Coffee and errors: Main programmer
-horseywin: Logic helper
+Coffee and errors: Game art and programmer
+horseywin: Programmer
 
 Language/engine:
 Godot
