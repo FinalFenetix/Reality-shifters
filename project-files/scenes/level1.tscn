@@ -1,10 +1,118 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca6gc56d4tamj"]
+[gd_scene load_steps=14 format=3 uid="uid://ca6gc56d4tamj"]
 
 [ext_resource type="PackedScene" uid="uid://dbpx0rdukw0xv" path="res://scenes/r_1_l_1.tscn" id="2_i8boi"]
 [ext_resource type="PackedScene" uid="uid://cbw2n3sfn83jw" path="res://scenes/player.tscn" id="2_vb7mb"]
 [ext_resource type="PackedScene" uid="uid://bdh377fraghhh" path="res://scenes/r_2_l_1.tscn" id="3_mjxj3"]
 [ext_resource type="Script" path="res://scripts/r_1_l_1.gd" id="3_qr16g"]
 [ext_resource type="Script" path="res://scripts/r_2_l_1.gd" id="5_wjcpw"]
+
+[sub_resource type="Animation" id="Animation_24nhb"]
+resource_name = "fadeIn"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1.03526),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v2mga"]
+resource_name = "fadeOut"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1.03526, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qv2hg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0mqg0"]
+_data = {
+"RESET": SubResource("Animation_qv2hg"),
+"fadeIn": SubResource("Animation_24nhb"),
+"fadeOut": SubResource("Animation_v2mga")
+}
+
+[sub_resource type="Animation" id="Animation_a4n0x"]
+resource_name = "fadeIn"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0jlpu"]
+resource_name = "fadeOut"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e3tce"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_32p5q"]
+_data = {
+"RESET": SubResource("Animation_e3tce"),
+"fadeIn": SubResource("Animation_a4n0x"),
+"fadeOut": SubResource("Animation_0jlpu")
+}
 
 [node name="level1" type="Node2D"]
 
@@ -17,5 +125,15 @@ position_smoothing_speed = 10.0
 [node name="R1_L1" parent="." instance=ExtResource("2_i8boi")]
 script = ExtResource("3_qr16g")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="R1_L1"]
+libraries = {
+"": SubResource("AnimationLibrary_0mqg0")
+}
+
 [node name="R2_L1" parent="." instance=ExtResource("3_mjxj3")]
 script = ExtResource("5_wjcpw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="R2_L1"]
+libraries = {
+"": SubResource("AnimationLibrary_32p5q")
+}
