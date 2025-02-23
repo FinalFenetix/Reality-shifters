@@ -1,0 +1,224 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbpx0rdukw0xv"]
+
+[ext_resource type="Texture2D" uid="uid://cxunm0cll3l1c" path="res://assets/slashBox.png" id="1_ruwsm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fu57f"]
+size = Vector2(32, 32)
+
+[node name="R1_L1" type="Node2D"]
+
+[node name="box17" type="Sprite2D" parent="."]
+position = Vector2(336, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box17/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box18" type="Sprite2D" parent="."]
+position = Vector2(368, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box18/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box19" type="Sprite2D" parent="."]
+position = Vector2(368, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box19/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box20" type="Sprite2D" parent="."]
+position = Vector2(336, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box20/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box21" type="Sprite2D" parent="."]
+position = Vector2(272, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box21/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box22" type="Sprite2D" parent="."]
+position = Vector2(304, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box22"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box22/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box23" type="Sprite2D" parent="."]
+position = Vector2(304, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box23"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box23/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box24" type="Sprite2D" parent="."]
+position = Vector2(272, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box24/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box25" type="Sprite2D" parent="."]
+position = Vector2(208, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box25"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box25/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box26" type="Sprite2D" parent="."]
+position = Vector2(240, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box26"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box26/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box27" type="Sprite2D" parent="."]
+position = Vector2(240, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box27"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box27/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box28" type="Sprite2D" parent="."]
+position = Vector2(208, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box28"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box28/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box29" type="Sprite2D" parent="."]
+position = Vector2(144, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box29"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box29/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box30" type="Sprite2D" parent="."]
+position = Vector2(176, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box30"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box30/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box31" type="Sprite2D" parent="."]
+position = Vector2(176, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box31"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box31/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box32" type="Sprite2D" parent="."]
+position = Vector2(144, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box32"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box32/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box33" type="Sprite2D" parent="."]
+position = Vector2(80, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box33"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box33/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box34" type="Sprite2D" parent="."]
+position = Vector2(112, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box34"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box34/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box35" type="Sprite2D" parent="."]
+position = Vector2(112, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box35"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box35/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box36" type="Sprite2D" parent="."]
+position = Vector2(80, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box36"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box36/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box37" type="Sprite2D" parent="."]
+position = Vector2(16, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box37"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box37/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box38" type="Sprite2D" parent="."]
+position = Vector2(48, 344)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box38"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box38/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box39" type="Sprite2D" parent="."]
+position = Vector2(48, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box39"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box39/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box40" type="Sprite2D" parent="."]
+position = Vector2(16, 312)
+texture = ExtResource("1_ruwsm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box40"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box40/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
