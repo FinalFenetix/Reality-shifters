@@ -1,10 +1,26 @@
-[gd_scene load_steps=14 format=3 uid="uid://ca6gc56d4tamj"]
+[gd_scene load_steps=16 format=3 uid="uid://ca6gc56d4tamj"]
 
 [ext_resource type="PackedScene" uid="uid://dbpx0rdukw0xv" path="res://scenes/r_1_l_1.tscn" id="2_i8boi"]
 [ext_resource type="PackedScene" uid="uid://cbw2n3sfn83jw" path="res://scenes/player.tscn" id="2_vb7mb"]
 [ext_resource type="PackedScene" uid="uid://bdh377fraghhh" path="res://scenes/r_2_l_1.tscn" id="3_mjxj3"]
 [ext_resource type="Script" path="res://scripts/r_1_l_1.gd" id="3_qr16g"]
 [ext_resource type="Script" path="res://scripts/r_2_l_1.gd" id="5_wjcpw"]
+[ext_resource type="PackedScene" uid="uid://5qbpmc848qum" path="res://scenes/death_zone.tscn" id="6_p1w8i"]
+
+[sub_resource type="Animation" id="Animation_qv2hg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_24nhb"]
 resource_name = "fadeIn"
@@ -38,7 +54,14 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_qv2hg"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0mqg0"]
+_data = {
+"RESET": SubResource("Animation_qv2hg"),
+"fadeIn": SubResource("Animation_24nhb"),
+"fadeOut": SubResource("Animation_v2mga")
+}
+
+[sub_resource type="Animation" id="Animation_e3tce"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -51,13 +74,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0mqg0"]
-_data = {
-"RESET": SubResource("Animation_qv2hg"),
-"fadeIn": SubResource("Animation_24nhb"),
-"fadeOut": SubResource("Animation_v2mga")
 }
 
 [sub_resource type="Animation" id="Animation_a4n0x"]
@@ -92,21 +108,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_e3tce"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_32p5q"]
 _data = {
 "RESET": SubResource("Animation_e3tce"),
@@ -114,12 +115,16 @@ _data = {
 "fadeOut": SubResource("Animation_0jlpu")
 }
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ds7gl"]
+
 [node name="level1" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("2_vb7mb")]
 position = Vector2(121, 219)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+limit_bottom = 600
+position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="R1_L1" parent="." instance=ExtResource("2_i8boi")]
@@ -137,3 +142,9 @@ script = ExtResource("5_wjcpw")
 libraries = {
 "": SubResource("AnimationLibrary_32p5q")
 }
+
+[node name="DeathZone" parent="." instance=ExtResource("6_p1w8i")]
+position = Vector2(154, 397)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+shape = SubResource("WorldBoundaryShape2D_ds7gl")
