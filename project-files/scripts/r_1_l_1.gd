@@ -1,5 +1,5 @@
 extends Node2D
-@onready var animation: AnimationPlayer = $"../R2_L1/AnimationPlayer"
+@onready var animation: AnimationPlayer = $"../R1_L1/AnimationPlayer"
 var reality = 0
 func _process(delta: float) -> void:
 	if Global.CurrentReality != reality:
