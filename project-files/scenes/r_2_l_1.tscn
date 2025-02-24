@@ -150,3 +150,57 @@ texture = ExtResource("1_lm7nm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="box16/StaticBody2D"]
 shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box17" type="Sprite2D" parent="."]
+position = Vector2(830, 327)
+texture = ExtResource("1_lm7nm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box17/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box18" type="Sprite2D" parent="."]
+position = Vector2(798, 327)
+texture = ExtResource("1_lm7nm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box18/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box19" type="Sprite2D" parent="."]
+position = Vector2(830, 295)
+texture = ExtResource("1_lm7nm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box19/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box20" type="Sprite2D" parent="."]
+position = Vector2(798, 295)
+texture = ExtResource("1_lm7nm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box20/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box24" type="Sprite2D" parent="."]
+position = Vector2(1081, 311)
+texture = ExtResource("1_lm7nm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box24/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
+
+[node name="box25" type="Sprite2D" parent="."]
+position = Vector2(1404, 259)
+texture = ExtResource("1_lm7nm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box25"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box25/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fu57f")
