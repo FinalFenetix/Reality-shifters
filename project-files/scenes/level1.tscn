@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://ca6gc56d4tamj"]
 
-[ext_resource type="PackedScene" uid="uid://dbpx0rdukw0xv" path="res://scenes/r_1_l_1.tscn" id="2_i8boi"]
+[ext_resource type="PackedScene" path="res://scenes/r_1_l_1.tscn" id="2_i8boi"]
 [ext_resource type="PackedScene" uid="uid://cbw2n3sfn83jw" path="res://scenes/player.tscn" id="2_vb7mb"]
-[ext_resource type="PackedScene" uid="uid://bdh377fraghhh" path="res://scenes/r_2_l_1.tscn" id="3_mjxj3"]
+[ext_resource type="PackedScene" path="res://scenes/r_2_l_1.tscn" id="3_mjxj3"]
 [ext_resource type="Script" path="res://scripts/r_1_l_1.gd" id="3_qr16g"]
 [ext_resource type="Script" path="res://scripts/r_2_l_1.gd" id="5_wjcpw"]
-[ext_resource type="PackedScene" uid="uid://5qbpmc848qum" path="res://scenes/death_zone.tscn" id="6_p1w8i"]
+[ext_resource type="PackedScene" path="res://scenes/death_zone.tscn" id="6_p1w8i"]
 
 [sub_resource type="Animation" id="Animation_qv2hg"]
 length = 0.001
